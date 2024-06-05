@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+  --mobile: 375px;
+  --desktop: 1440px;
+
+  font-family: 'Manrope', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+body {
+  height: 100vh;
+  background: var(--dark-blue);
+}
+
+.container {
+  margin: auto 14px;
+  display: flex;
+  height: 100%;
+}
+
+.advice {
+  width: 450px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px 20px 100px 20px;
+  background: var(--dark-grayish-blue);
+  margin: auto;
+  gap: 44px;
+  position: relative;
+}
+
+.advice .divider {
+  width: 100%;
+}
+
+.advice .number {
+  color: var(--neon-green);
+  letter-spacing: 3px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.advice .content {
+  color: var(--light-cyan);
+  text-align: center;
+}
+
+.btn {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background: var(--neon-green);
+  border: 0;
+  outline: 0;
+  transition: all 0.3s ease;
+  position: absolute;
+  display: flex;
+  bottom: -52px;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 28px 8px hsl(149.83deg 67.13% 67.84%);
+}
+
+.btn .icon {
+  margin: auto;
+  transform: scale(1.5);
+}
+
+@media screen and (min-width: 1024px) {
+  .advice {
+    width: 680px;
+    padding: 60px 74px 100px 74px;
+  }
+}
